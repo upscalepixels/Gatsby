@@ -1,0 +1,97 @@
+header {
+    background-image: radial-gradient(
+        var(--color-two) 0%, 
+        var(--color-one) 100%
+    );
+    background-color: var(--color-one);
+}
+
+nav {
+    display: flex;
+    flex: 1;
+}
+
+nav a {
+    font-family: "Droid Sans", Verdana, Geneva, Tahoma, sans-serif;
+    font-size: .9rem;
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+nav a, nav a:visited {
+    color: var(--white-text);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    min-height: 120px;
+}
+
+.menu-left, .menu-middle, .menu-right {
+    height: 100%;
+}
+
+.menu-left {
+    background-image: url('../images/ice-menu-left.png');
+    width: 63px;
+    min-width: 63px;
+}
+
+.menu-middle {
+    background-image: url('../images/ice-menu-middle.png'); 
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;   
+}
+
+.menu-right {
+    background-image: url('../images/ice-menu-right.png');
+    width: 63px;
+    min-width: 63px;
+}
+
+.site-title {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.menu-links {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin: 0;
+    flex: 1;
+    margin-left: 10px;
+    height: 100%;
+}
+
+.menu-links a {
+    margin: 0 10px;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+}
+
+.hero-container img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+}
+
+.hero-text, .hero-img {
+    flex: 1;
+}
+
+.hero-text {
+    text-align: center;
+    align-self: center;
+}
+
