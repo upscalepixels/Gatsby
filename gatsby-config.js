@@ -10,7 +10,7 @@
 module.exports = {
   siteMetadata: {
     title: `Upscale Pixels`,
-    description: `Indianapolis-based web development, graphic design, and marketing services by Michael Beasley. Have your vision created into a fully functional website, landing page, or e-commerce store.`,
+    description: `Indianapolis-based web development and graphic design services by Michael Beasley. Have your vision created into a fully functional website, mobile app, landing page, or e-commerce store.`,
     author: `@gatsbyjs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
@@ -43,7 +43,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Droid Sans', 'Droid Serif']
+          families: ['Droid Sans', 'Droid Serif', 'Material Symbols Outlined']
         }
       }
     },

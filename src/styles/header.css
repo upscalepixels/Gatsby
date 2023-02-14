@@ -7,20 +7,7 @@ header {
 }
 
 nav {
-    display: flex;
-    flex: 1;
-}
-
-nav a {
-    font-family: "Droid Sans", Verdana, Geneva, Tahoma, sans-serif;
-    font-size: .9rem;
-    text-decoration: none;
-    cursor: pointer;
-    text-transform: uppercase;
-}
-
-nav a, nav a:visited {
-    color: var(--white-text);
+    display: block;
 }
 
 .nav-container {
@@ -28,7 +15,7 @@ nav a, nav a:visited {
     justify-content: space-between;
     align-items: center;
     flex: 1;
-    min-height: 120px;
+    height: 120px;
 }
 
 .menu-left, .menu-middle, .menu-right {
@@ -44,15 +31,34 @@ nav a, nav a:visited {
 .menu-middle {
     background-image: url('../images/ice-menu-middle.png'); 
     flex-grow: 1;
-    display: flex;
-    align-items: center;
-    padding: 0px 10px;   
-}
+    padding: 0px 25px;
+} 
 
 .menu-right {
     background-image: url('../images/ice-menu-right.png');
     width: 63px;
     min-width: 63px;
+}
+
+.inner-nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.material-symbols-outlined {
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: var(--white);
+    filter: drop-shadow(0 2px var(--color-one));
 }
 
 .site-title {
@@ -61,17 +67,48 @@ nav a, nav a:visited {
 }
 
 .menu-links {
-    display: flex;
+    display: none;
     align-items: center;
-    justify-content: right;
     margin: 0;
-    flex: 1;
     margin-left: 10px;
     height: 100%;
 }
 
 .menu-links a {
-    margin: 0 10px;
+    padding: 0 10px;
+    font-family: "Droid Sans", Verdana, Geneva, Tahoma, sans-serif;
+    font-size: .9rem;
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: var(--white);
+    filter: drop-shadow(0px 2px var(--color-one));
+}
+
+.mobile-menu {
+    position: relative;
+    top: -50px;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 765px;
+    z-index: 999;
+}
+
+.mobile-menu-links {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-three);
+}
+
+.mobile-menu-links a {
+    padding: 0 10px;
+    font-family: "Droid Sans", Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: var(--white);
+    filter: drop-shadow(0px 2px var(--color-one));
 }
 
 .hero-container {
@@ -95,3 +132,12 @@ nav a, nav a:visited {
     align-self: center;
 }
 
+@media (min-width: 768px) {
+    .menu-links {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+}
