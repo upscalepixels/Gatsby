@@ -23,13 +23,13 @@ const Header = ({ siteTitle }) => {
     }
   ]
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
   
   return (
     <header>
       <nav>
         <div className="nav-container container">
-            <h2>Site Logo</h2>
+            <Link to="/"><h2>{siteTitle}</h2></Link>
             <div className="menu-links">
               {menuLinks.map(link => (
                 <Link to={link.url} key={link.url}>{link.text}</Link>
