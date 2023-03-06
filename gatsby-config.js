@@ -40,12 +40,20 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-web-font-loader',
+      resolve: `gatsby-plugin-web-font-loader`,
       options: {
         google: {
-          families: ['Droid Sans', 'Droid Serif', 'Material Symbols Outlined']
-        }
-      }
+          families: [`Droid Sans`, `Droid Serif`, `Material Symbols Outlined`]
+        },
+      },
+    },
+    `gatsby-plugin-mdx`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/src/content/`
+      },
     },
   ],
 }
