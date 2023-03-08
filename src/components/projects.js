@@ -34,7 +34,6 @@ export const ProjectList = () => {
 
     return (
       <>      
-        <h3>My Projects</h3>
         <div className="project-container">
           {results.map(({ node }) => (
             <div className="project-item" key={node.id}>
